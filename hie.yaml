@@ -1,7 +1,7 @@
 cradle:
-  cabal:
+  stack:
     - path: "./src"
-      component: "lib:clash-blinky"
+      component: "clash-blinky:lib"
     - path: "./tests/doctests.hs"
       component: "clash-blinky:doctests"
     - path: "./tests"
