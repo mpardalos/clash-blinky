@@ -2,7 +2,7 @@
 -- our code to be warning-free.
 {-# OPTIONS_GHC -Wno-orphans #-}
 
-module Example.Project where
+module Top where
 
 import Clash.Prelude
 import Clash.Explicit.Prelude (noReset)

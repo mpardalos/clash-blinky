@@ -11,7 +11,7 @@ outDir :: FilePath
 outDir = "_build"
 
 topHsModule :: String
-topHsModule = "Example.Project"
+topHsModule = "Top"
 
 topModule :: String
 topModule = "topEntity"
@@ -35,7 +35,7 @@ main = shakeArgs shakeOptions{ shakeFiles = outDir } do
         ] $
         return ()
 
-    phony "clashi" $ clash ["--interactive", "src/Example/Project.hs"]
+    phony "clashi" $ clash ["--interactive", "src/Top.hs"]
 
     SynthKit{ bitfile, phonies } <- ecp5 "12k" kit
       (outDir </> "ulx3s" </> "synth") topModule (return [lpf])
